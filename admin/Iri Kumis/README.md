@@ -13,4 +13,5 @@
 
 [Iri Kumi #3 Video - Sprint 1 Review](https://drive.google.com/file/d/1roHmldTOhn-BMA7_IffGasdu79EoeFCW/view?usp=sharing)
 
-## Iri Kumi #4
+## Iri Kumi #4 - UI/UX
+[Iri Kumi #4 Video - UI/UX](https://www.youtube.com/watch?v=zbDDcwoJDvs)
