@@ -15,3 +15,8 @@
 
 ## Iri Kumi #4 - UI/UX
 [Iri Kumi #4 Video - UI/UX](https://www.youtube.com/watch?v=zbDDcwoJDvs)
+
+## Iri Kumi #5 - AI
+[Iri Kumi #5 Slides](https://github.com/UCSD-ECE140/hydrolink/blob/main/admin/Iri%20Kumis/Slides/ECE%20140B%20Iri%20Kumi%20%232%20-%20The%20Kano%20Model.pdf)
+
+[Iri Kumi #5 Video - AI](https://drive.google.com/file/d/17RFv2zQF41SGwgLVl00DhcJVcE2kRGFl/view?usp=drive_link)
