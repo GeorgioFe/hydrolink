@@ -29,6 +29,8 @@
 
 [Iri Kumi #5 Video - AI](https://drive.google.com/file/d/17RFv2zQF41SGwgLVl00DhcJVcE2kRGFl/view?usp=drive_link)
 
+<br/>
+
 ## Iri Kumi #6 - Sprint 2 Review
 [Iri Kumi #6 Video - Sprint 2 Review](https://youtu.be/-S7vd79vQi0)
 
