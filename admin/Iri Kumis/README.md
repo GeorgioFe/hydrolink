@@ -28,3 +28,8 @@
 [Iri Kumi #5 Slides](https://github.com/UCSD-ECE140/hydrolink/blob/main/admin/Iri%20Kumis/Slides/ECE%20140B%20Iri%20Kumi%20%235%20-%20Artificial%20Intelligence.pdf)
 
 [Iri Kumi #5 Video - AI](https://drive.google.com/file/d/17RFv2zQF41SGwgLVl00DhcJVcE2kRGFl/view?usp=drive_link)
+
+## Iri Kumi #6 - Sprint 2 Review
+[Iri Kumi #6 Video - Sprint 2 Review](https://youtu.be/-S7vd79vQi0)
+
+<br/>
