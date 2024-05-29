@@ -1,0 +1,89 @@
+body {
+    font-family: "K2D", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #2498BC, #19DEBA);
+    color: white;
+}
+
+.container {
+    padding: 80px 20px 20px;
+    border-radius: 8px;
+}
+
+main {
+    padding: 10px;
+    text-align: left; /* Align text to the left for content */
+}
+
+h2 {
+    font-size: 24px; /* Increase the font size for h2 */
+    margin-bottom: 10px;
+    text-align: left; /* Ensure heading is left-aligned */
+}
+
+.support {
+    border-radius: 8px;
+    padding: 20px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+}
+
+.support h2, .support h3 {
+    font-size: 28px; /* Increase the font size for the support headings */
+    margin-bottom: 10px;
+    margin-left: -20px;
+}
+
+.support p {
+    font-size: 18px; /* Increase the font size for support paragraphs */
+    line-height: 1.5;
+    text-align: left; /* Ensure paragraphs are left-aligned */
+    margin: 5px -20px;
+}
+
+.support button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 0; /* Increase padding to make the button longer */
+    border: 3px solid white;
+    border-radius: 10px;
+    font-size: 18px; /* Increase the font size for the button */
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent text wrapping */
+    width: 100%; /* Make the button full width */
+    max-width: 500px; /* Set a fixed width for the button */
+    text-align: center; /* Center the text inside the button */
+}
+
+.support button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.support ul {
+    list-style-type: disc;
+    margin-left: -20px; /* Adjust the margin to move bullet points closer to the left */
+    padding-left: 20px; /* Adjust padding for better spacing */
+    margin-top: 3px;
+}
+
+.support hr {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 500px) {
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

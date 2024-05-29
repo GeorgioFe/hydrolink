@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 80px 20px 20px;
+}
+
+main {
+    padding: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hydration-level .status {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+}
+
+.time-buttons {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.time-buttons button {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.time-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.ai-recommendation {
+    background-color: #cce5ff;
+    padding: 10px;
+    border-radius: 5px;
+    color: #004085;
+    margin-bottom: 10px;
+}
+
+.water-stats p {
+    margin: 5px 0;
+}
+
+.reminders {
+    margin-top: 20px;
+}
+
+.reminders label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reminders input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reminders button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reminders button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 500px) {
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .time-buttons button {
+        width: calc(50% - 5px);
+    }
+}

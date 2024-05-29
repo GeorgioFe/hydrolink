@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2498BC" media="(prefers-color-scheme: dark)">
+    <title>About Us - Hydrolink</title>
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+    <link rel="stylesheet" href="../static/css/about-styles.css">
+    <link rel="stylesheet" href="../static/css/header-menu-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <header class="sticky-header">
+            <h1>Hydrolink</h1>
+            <div class="burger" id="burger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </header>
+    </div>
+    <div id="menu" class="menu">
+        <a href="/">Home</a>
+        <a href="#">About Us</a>
+        <a href="/help">Help and Support</a>
+    </div>
+    <div class="container">
+        <main id="about-page">
+            <section class="mission">
+                <h2>Our mission</h2>
+                <p>Our mission is to enhance personal health and hydration through innovative technology.</p>
+                <p>Discover how our smart lid is transforming the way you monitor your water intake and maintain your well-being—everywhere you go.</p>
+                <button onclick="window.location.href='/'">Get started now</button>
+            </section>
+            <section class="founders">
+                <h2>Founders</h2>
+                <div class="founder">
+                    <img src="../static/assets/ned-avatar.png" alt="Ned Bitar">
+                    <p>Ned Bitar</p>
+                </div>
+                <div class="founder">
+                    <img src="../static/assets/georgio-avatar.png" alt="Georgio Feghali">
+                    <p>Georgio Feghali</p>
+                </div>
+                <div class="founder">
+                    <img src="../static/assets/daniel-avatar.png" alt="Daniel Sanei">
+                    <p>Daniel Sanei</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../static/js/about-script.js"></script>
+</body>
+</html>
