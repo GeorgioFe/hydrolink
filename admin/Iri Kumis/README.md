@@ -32,6 +32,8 @@
 <br/>
 
 ## Iri Kumi #6 - Sprint 2 Review
+[Iri Kumi #6 Slides](https://github.com/UCSD-ECE140/hydrolink/blob/a1714b763881742c948424c3c4bcf6a9c289a0e8/admin/Iri%20Kumis/Slides/ECE%20140B%20Iri%20Kumi%20%236%20-%20Sprint%202%20Review.pdf)
+
 [Iri Kumi #6 Video - Sprint 2 Review](https://youtu.be/-S7vd79vQi0)
 
 <br/>
@@ -42,6 +44,9 @@
 <br/>
 
 ## Iri Kumi #8 - Final Update
+[Iri Kumi #8 Slides](https://github.com/UCSD-ECE140/hydrolink/blob/a1714b763881742c948424c3c4bcf6a9c289a0e8/admin/Iri%20Kumis/Slides/ECE%20140B%20Iri%20Kumi%20%238%20-%20Final%20Update.pdf)
+
+
 [Iri Kumi #8 Video - Final Update](https://youtu.be/JPu5cSPxo98)
 
 <br/>
