@@ -35,3 +35,13 @@
 [Iri Kumi #6 Video - Sprint 2 Review](https://youtu.be/-S7vd79vQi0)
 
 <br/>
+
+## Iri Kumi #7 - Accessibility
+[Iri Kumi #7 Video - Accessibility](https://drive.google.com/file/d/1FrVEiCtDhw1FUlxuZNw4UBBRSlLiOrNn/view?usp=sharing)
+
+<br/>
+
+## Iri Kumi #8 - Final Update
+[Iri Kumi #8 Video - Final Update](https://youtu.be/JPu5cSPxo98)
+
+<br/>
