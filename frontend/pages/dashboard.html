@@ -1,1 +1,64 @@
-dashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hydrolink</title>
+    <link rel="stylesheet" href="../static/css/header-menu-styles-white.css">
+    <link rel="stylesheet" href="../static/css/dashboard-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <header class="sticky-header">
+            <span class="header-title">Hydrolink</span>
+            <div class="burger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="chart-placeholder">
+            <img src="../static/assets/placeholder.png" alt="Chart Placeholder">
+        </div>
+        <hr>
+        <div class="intake-calculator">
+            <h2>Calculate Daily Intake</h2>
+            <form onsubmit="calculateIntake(event)">
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Enter your age">
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (lbs)</label>
+                    <input type="number" id="weight" placeholder="Enter your weight">
+                </div>
+                <div class="input-group">
+                    <label for="activity">Activity (hours/week)</label>
+                    <input type="number" id="activity" placeholder="Enter activity hours">
+                </div>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="intake-result" class="result-container" style="display: none;"></div>
+        </div>
+        <hr>
+        <div class="reminder-settings">
+            <h2>Set Reminder Interval</h2>
+            <form>
+                <div class="input-group">
+                    <label for="interval">Interval (minutes)</label>
+                    <input type="number" id="interval" placeholder="Enter interval in minutes">
+                </div>
+                <button type="button" onclick="setReminder()">Set Reminder</button>
+                <div id="reminder-result" class="result-container" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/dashboard-script.js"></script>
+</body>
+</html>

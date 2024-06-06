@@ -1,0 +1,47 @@
+/* header-menu-styles-white.css */
+.header-container {
+    width: 100%;
+    background-color: white; /* Ensure the header container has a white background */
+}
+
+.sticky-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f3c55;
+}
+
+.burger {
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #1f3c55;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
