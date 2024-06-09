@@ -13,7 +13,7 @@ async function calculateIntake(event) {
     const weight = document.getElementById('weight').value;
     const activity = document.getElementById('activity').value;
 
-    const response = await fetch('http://192.168.1.236:500/calculate_recommended_intake', {
+    const response = await fetch('http://172.20.10.2:500/calculate_recommended_intake', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ async function setReminder() {
     console.log(`Setting reminder interval to ${interval} minutes.`);
 
     try {
-        const response = await fetch('http://192.168.1.236:500/set_reminder', {
+        const response = await fetch('http://172.20.10.2:500/set_reminder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ async function toggleDemoMode() {
     console.log(`Demo mode is now ${demoMode ? 'enabled' : 'disabled'}.`);
 
     try {
-        const response = await fetch('http://192.168.1.236:500/toggle_demo_mode', {
+        const response = await fetch('http://172.20.10.2:500/toggle_demo_mode', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -89,5 +89,30 @@ async function toggleDemoMode() {
         }
     } catch (error) {
         console.log("Fetch error:", error);
+    }
+}
+
+function startVolumeUpdate() {
+    setInterval(async () => {
+        const response = await fetch('http://172.20.10.2:500/volume');
+        if (response.ok) {
+            const data = await response.json();
+            document.getElementById('volume-display').innerText = `Volume: ${data.latest_volume} oz`;
+        }
+    }, 5000);
+}
+
+async function calibrate() {
+    const response = await fetch('http://172.20.10.2:500/calibrate', {
+        method: 'POST'
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        // document.getElementById('volume-display').innerText = `Volume: ${data.calibrated_distance}`;
+        startVolumeUpdate(); // Start updating the volume every 5 seconds
+    } else {
+        const errorData = await response.json();
+        document.getElementById('volume-display').innerText = `Error: ${errorData.message}`;
     }
 }

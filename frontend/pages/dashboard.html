@@ -27,8 +27,14 @@
             <img src="../static/assets/placeholder.png" alt="Chart Placeholder">
         </div>
         <hr>
+        <div class="track-intake">
+            <h2>Track Your Intake</h2>
+            <button id="calibrate-button" onclick="calibrate()">Calibrate</button>
+            <p id="volume-display">Volume: Not Calibrated</p>
+        </div>
+        <hr>
         <div class="intake-calculator">
-            <h2>Calculate Daily Intake</h2>
+            <h2>Calculate Recommended Daily Intake</h2>
             <form onsubmit="calculateIntake(event)">
                 <div class="input-group">
                     <label for="age">Age</label>

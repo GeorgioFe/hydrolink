@@ -2,13 +2,17 @@
 #include <Adafruit_NeoPixel.h>
 #include <WebSocketsClient.h>
 #include <ArduinoJson.h>
+#include <HTTPClient.h>
 
 // Replace with your network credentials
-const char* ssid = "AbelsTheorem";
-const char* password = "M1alyan123";
+// const char* ssid = "AbelsTheorem";
+// const char* password = "M1alyan123";
+const char* ssid = "Georgio";
+const char* password = "12345678";
 
 // Server settings
-const char* websocket_server = "192.168.1.236"; // Replace with your server's IP
+const char* websocket_server = "172.20.10.2"; // Replace with your server's IP
+const char* server_endpoint = "http://172.20.10.2:500/distance";
 
 // NeoPixel settings
 #define PIXEL_PIN 26
@@ -35,6 +39,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length);
 void setPixels(bool state);
 long readUltrasonicDistance(int triggerPin, int echoPin);
 void setPixelsBasedOnDistance(long distance);
+void sendDistanceData(long distance);
 
 void setup() {
   Serial.begin(115200);
@@ -67,6 +72,10 @@ void setup() {
 
 void loop() {
   webSocket.loop();
+
+  // Send Distance 
+  long distance = readUltrasonicDistance(TRIGGER_PIN, ECHO_PIN);
+  sendDistanceData(distance);
 
   if (demoMode) {
     // Demo mode: Update LED color based on distance
@@ -198,4 +207,28 @@ void setPixelsBasedOnDistance(long distance) {
     pixels.setPixelColor(i, color);
   }
   pixels.show();
+}
+
+// Send distance data to server
+void sendDistanceData(long distance) {
+  if (WiFi.status() == WL_CONNECTED) { // Check WiFi connection status
+    HTTPClient http;
+    http.begin(server_endpoint); // Specify the URL
+    http.addHeader("Content-Type", "application/json"); // Specify content-type header
+
+    String httpRequestData = "{\"distance\": " + String(distance) + "}";
+    int httpResponseCode = http.POST(httpRequestData);
+
+    if (httpResponseCode > 0) {
+      String response = http.getString(); // Get the response to the request
+      Serial.println(httpResponseCode); // Print return code
+      Serial.println(response); // Print request answer
+    } else {
+      Serial.print("Error on sending POST: ");
+      Serial.println(httpResponseCode);
+    }
+    http.end(); // Free resources
+  } else {
+    Serial.println("Error in WiFi connection");
+  }
 }

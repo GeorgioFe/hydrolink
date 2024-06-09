@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Form, Request, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Form, Request, WebSocket, WebSocketDisconnect, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,6 +22,8 @@ app.add_middleware(
 # Global variable to store the current interval and the WebSocket connection
 current_interval = None
 websocket_connection = None
+latest_distance = None
+calibrated_distance = None
 
 # Mount the static files directories
 app.mount("/static", StaticFiles(directory=os.path.join(os.path.dirname(__file__), '..', 'frontend', 'static')), name="static")
@@ -102,7 +104,7 @@ def signup(email: str = Form(...), password: str = Form(...)):
     
     return HTMLResponse(content=content, status_code=200)
 
-# Route for Sign In Page.
+# Route for Sign In Button.
 @app.post("/signin", response_class=HTMLResponse)
 def signin(email: str = Form(...), password: str = Form(...)):
     # Sign in user
@@ -163,6 +165,33 @@ async def toggle_demo_mode(request: Request):
         message = "demo_on" if demo_mode else "demo_off"
         await websocket_connection.send_text(message)
     return JSONResponse(content={"message": f"Demo mode {'enabled' if demo_mode else 'disabled'}"})
+
+# Route for updating the current distance from the Ultrasonic sensor.
+@app.post("/distance")
+async def receive_distance(request: Request):
+    global latest_distance
+    body = await request.json()
+    distance = body.get("distance")
+    latest_distance = distance
+    print(f"Received distance: {latest_distance}, Calibrated distance: {calibrated_distance}")
+    return JSONResponse(content={"message": "Distance received"})
+
+# Route for calibrating the distance.
+@app.post("/calibrate")
+def calibrate():
+    global calibrated_distance, latest_distance
+    if latest_distance is not None:
+        calibrated_distance = latest_distance
+        print(f"Calibrated distance: {calibrated_distance}")
+        return JSONResponse(content={"message": "Calibration completed", "calibrated_distance": calibrated_distance})
+    else:
+        return JSONResponse(content={"message": "No distance data available for calibration"}, status_code=400)
+
+# Route to get the volume drank.
+@app.get("/volume")
+async def get_volume():
+    latest_volume = round((latest_distance - calibrated_distance) * 1.4, 2)
+    return JSONResponse(content={"latest_volume": latest_volume})
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
