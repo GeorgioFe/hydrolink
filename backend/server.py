@@ -155,6 +155,15 @@ async def set_reminder(request: Request):
         
     return JSONResponse(content={"message": "Interval received", "interval": current_interval})
 
+@app.post("/toggle_demo_mode")
+async def toggle_demo_mode(request: Request):
+    body = await request.json()
+    demo_mode = body.get("demo_mode")
+    if websocket_connection:
+        message = "demo_on" if demo_mode else "demo_off"
+        await websocket_connection.send_text(message)
+    return JSONResponse(content={"message": f"Demo mode {'enabled' if demo_mode else 'disabled'}"})
+
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     global websocket_connection

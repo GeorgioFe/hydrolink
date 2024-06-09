@@ -67,3 +67,27 @@ async function setReminder() {
         reminderContainer.style.display = 'flex'; // Show the result container
     }
 }
+
+async function toggleDemoMode() {
+    const demoMode = document.getElementById('demo-mode').checked;
+    console.log(`Demo mode is now ${demoMode ? 'enabled' : 'disabled'}.`);
+
+    try {
+        const response = await fetch('http://192.168.1.236:500/toggle_demo_mode', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ demo_mode: demoMode })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data.message);
+        } else {
+            console.log("Response error:", response.statusText);
+        }
+    } catch (error) {
+        console.log("Fetch error:", error);
+    }
+}
