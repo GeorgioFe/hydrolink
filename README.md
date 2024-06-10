@@ -26,10 +26,12 @@
     <img src="./admin/assets/georgio.png" width="60" height="60" alt="Georgio" style="margin-right: 20px;">
     <span style="line-height: 60px;">Georgio Feghali</span>
   </div>
+  <br>
   <div style="display: flex; align-items: center; margin-bottom: 30px;">
     <img src="./admin/assets/daniel.png" width="60" height="60" alt="Daniel" style="margin-right: 20px;">
     <span style="line-height: 60px;">Daniel Sanei</span>
   </div>
+  <br>
   <div style="display: flex; align-items: center; margin-bottom: 30px;">
     <img src="./admin/assets/ned.png" width="60" height="60" alt="Ned" style="margin-right: 20px;">
     <span style="line-height: 60px;">Ned Bitar</span>
