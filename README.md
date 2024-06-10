@@ -21,20 +21,20 @@
 - You can access our Iri Kumis [here](/admin/Iri%20Kumis/).
 
 ### Team Members
-<ul style="list-style-type: none; padding: 0;">
-  <li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="./admin/assets/georgio.png" width="60" height="60" alt="Georgio" style="margin-right: 10px;">
-    <span>Georgio Feghali</span>
-  </li>
-  <li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="./admin/assets/daniel.png" width="60" height="60" alt="Daniel" style="margin-right: 10px;">
-    <span>Daniel Sanei</span>
-  </li>
-  <li style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="./admin/assets/ned.png" width="60" height="60" alt="Ned" style="margin-right: 10px;">
-    <span>Ned Bitar</span>
-  </li>
-</ul>
+<div>
+  <div style="margin-bottom: 20px;">
+    <img src="./admin/assets/georgio.png" width="60" height="60" alt="Georgio" style="vertical-align: middle; margin-right: 10px;">
+    <span style="vertical-align: middle;">Georgio Feghali</span>
+  </div>
+  <div style="margin-bottom: 20px;">
+    <img src="./admin/assets/daniel.png" width="60" height="60" alt="Daniel" style="vertical-align: middle; margin-right: 10px;">
+    <span style="vertical-align: middle;">Daniel Sanei</span>
+  </div>
+  <div style="margin-bottom: 20px;">
+    <img src="./admin/assets/ned.png" width="60" height="60" alt="Ned" style="vertical-align: middle; margin-right: 10px;">
+    <span style="vertical-align: middle;">Ned Bitar</span>
+  </div>
+</div>
 
 ## High Level Overview of Hydrolink
 >Hydrolink is a universal smart water bottle lid designed to enhance hydration
