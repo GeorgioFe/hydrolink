@@ -21,18 +21,18 @@
 - You can access our Iri Kumis [here](/admin/Iri%20Kumis/).
 
 ### Team Members
-<div>
-  <div style="margin-bottom: 20px;">
-    <img src="./admin/assets/georgio.png" width="60" height="60" alt="Georgio" style="vertical-align: middle; margin-right: 10px;">
-    <span style="vertical-align: middle;">Georgio Feghali</span>
+<div style="text-align: left;">
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <img src="./admin/assets/georgio.png" width="60" height="60" alt="Georgio" style="margin-right: 20px;">
+    <span>Georgio Feghali</span>
   </div>
-  <div style="margin-bottom: 20px;">
-    <img src="./admin/assets/daniel.png" width="60" height="60" alt="Daniel" style="vertical-align: middle; margin-right: 10px;">
-    <span style="vertical-align: middle;">Daniel Sanei</span>
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <img src="./admin/assets/daniel.png" width="60" height="60" alt="Daniel" style="margin-right: 20px;">
+    <span>Daniel Sanei</span>
   </div>
-  <div style="margin-bottom: 20px;">
-    <img src="./admin/assets/ned.png" width="60" height="60" alt="Ned" style="vertical-align: middle; margin-right: 10px;">
-    <span style="vertical-align: middle;">Ned Bitar</span>
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <img src="./admin/assets/ned.png" width="60" height="60" alt="Ned" style="margin-right: 20px;">
+    <span>Ned Bitar</span>
   </div>
 </div>
 
