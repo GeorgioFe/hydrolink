@@ -17,7 +17,7 @@
 >At Hydrolink, we are a team of passionate engineering students dedicated to enhancing health and wellness through technology. Our mission is to simplify and democratize personal hydration monitoring. We provide a smart, cost-effective universal lid that fits any water bottle, allowing users to effortlessly track their hydration levels. With Hydrolink, monitoring your personal hydration is simple, accessible, and adaptable to any mainstream brand of water bottle.
 
 - You can read more about us and our product [here](/admin/Hydrolink%20-%20MVP%20Report.pdf).
-- You can access our MVP pitch deck here.
+- You can access our MVP pitch deck [here](/admin/Hydrolink%20-%20MVP%20Pitch%20Deck.pdf).
 - You can access our Iri Kumis [here](/admin/Iri%20Kumis/).
 
 ### Team Members
@@ -71,6 +71,7 @@ Coming Soon!
 .
 ├── README.md
 ├── admin
+│   ├── Hydrolink - MVP Pitch Deck.pdf
 │   ├── Hydrolink - MVP Report.pdf
 │   ├── Interviews
 │   │   ├── ECE 140B - Gali Interview.pdf
@@ -86,10 +87,13 @@ Coming Soon!
 │   │       └── ECE 140B Iri Kumi #8 - Final Update.pdf
 │   └── assets
 │       ├── architecture.png
+│       ├── cad.png
 │       ├── daniel.png
 │       ├── georgio.png
 │       ├── hydrolink-banner.png
-│       └── ned.png
+│       ├── ned.png
+│       ├── prototype.png
+│       └── ui.png
 ├── backend
 │   ├── __pycache__
 │   │   ├── auth.cpython-310.pyc
@@ -125,10 +129,10 @@ Coming Soon!
     │   └── welcome.html
     └── static
         ├── assets
-        │   ├── bottle.png
         │   ├── daniel-avatar.png
         │   ├── favicon.png
         │   ├── georgio-avatar.png
+        │   ├── lid.png
         │   ├── ned-avatar.png
         │   └── placeholder.png
         ├── css
@@ -148,5 +152,5 @@ Coming Soon!
             ├── script.js
             └── welcome-script.js
 
-19 directories, 60 files
+19 directories, 64 files
 ```
